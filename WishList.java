@@ -39,7 +39,7 @@ public class WishList {
 		double totalCost;
 		int start=0;
 		createIterator();
-		while (WishListIterator().hasNext())
+		while (createIterator())
 		{
 		if(items[start]==null)
 			return totalCost;
