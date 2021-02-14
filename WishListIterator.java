@@ -1,17 +1,24 @@
+/*
+ * Jonathan Brown 
+ * CSCE 247
+ * 2/13/2021
+ */
 package WishList;
 
-public class WishListIterator extends Item implements Iterator{
-		Item items [];
+public class WishListIterator implements Iterator {
+		Item [] items ;
 		int position;
+		// goes throught the array
 		public WishListIterator (Item [] a)
 		{
 			items = a;
 			while(hasNext())
 			{
-				Next();
+				next();
 			}
 			return;
 		}
+		// checks to see if there is any more room in array
 		public boolean hasNext()
 		{
 			if(items[position+1]==null)
@@ -19,7 +26,8 @@ public class WishListIterator extends Item implements Iterator{
 			else
 				return true;
 		}
-		public Item Next()
+		// move position
+		public Item next()
 		{
 			return items[position+1];
 		}
